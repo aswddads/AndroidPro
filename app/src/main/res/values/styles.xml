@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#CD2626</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">#CD2626</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/BaseAppTheme"></style>
+
+
+    MusicSecondusic App Activity Theme-->
+    <style name="MusicTheme" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="actionBarDivider">@android:color/white</item>
+        <item name="android:colorPrimary">#CD2626</item>
+        <item name="android:colorPrimaryDark">#CD2626</item>
+
+
+    </style>
+
+</resources>

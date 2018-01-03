@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    <LinearLayout
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <EditText
+            android:drawableLeft="@drawable/edit"
+            android:textSize="20sp"
+            android:id="@+id/et_search"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:background="@android:color/white"
+            android:id="@+id/tv_search"
+            android:paddingRight="15sp"
+            android:drawableRight="@drawable/search1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <View
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+    <FrameLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:visibility="invisible"
+            android:background="@drawable/progress_ro"
+            android:id="@+id/pb_search_progress"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"/>
+        <android.support.v7.widget.RecyclerView
+            android:visibility="invisible"
+            android:background="@android:color/white"
+            android:id="@+id/recycle_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </FrameLayout>
+
+</LinearLayout>

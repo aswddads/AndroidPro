@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_play"
+    android:background="#CD2626"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:background="#CD2626"
+        android:id="@+id/Image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:src="@mipmap/img" />
+
+    <View
+        android:background="#CD2626"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <!--显示歌曲状态-->
+    <TextView
+        android:textColor="@android:color/white"
+        android:background="#CD2626"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/MusicStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲名字" />
+    <View
+        android:background="#CD2626"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <RelativeLayout
+        android:background="#CD2626"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal">
+
+        <!--显示当前进度-->
+        <TextView
+            android:textColor="@android:color/white"
+            android:background="#CD2626"
+            android:id="@+id/MusicTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00" />
+
+        <SeekBar
+            android:textColor="@android:color/white"
+            android:id="@+id/MusicSeekBar"
+            android:layout_width="230sp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/MusicTime"
+            android:layout_weight="1"
+            android:max="100" />
+
+        <!--显示总进度-->
+        <TextView
+            android:textColor="@android:color/white"
+            android:background="#CD2626"
+            android:id="@+id/MusicTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/MusicSeekBar"
+            android:text="00:00" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:background="#CD2626"
+        android:layout_gravity="center"
+        android:id="@+id/fl_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:background="#CD2626"
+            android:id="@+id/BtnPlay"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/play"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <ImageView
+            android:background="#CD2626"
+            android:id="@+id/BtnStop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/stop"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:background="#CD2626"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="72dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/rl_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/cancel"
+                android:id="@+id/iv_cancel"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+        <ProgressBar
+            android:visibility="invisible"
+            android:background="@drawable/progress_ro"
+            android:id="@+id/pb_cancel_progress"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+</LinearLayout>
+
+
